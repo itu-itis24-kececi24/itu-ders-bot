@@ -1,0 +1,17 @@
+{
+    "account": {
+        "username": "username",
+        "password": "password"
+    },
+    "time": {
+        "year": 2026,
+        "month": 1,
+        "day": 1,
+        "hour": 14,
+        "minute": 0
+    },
+    "courses": {
+        "crn": [],
+        "scrn": []
+    }
+}
