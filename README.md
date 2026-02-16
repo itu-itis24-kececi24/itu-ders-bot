@@ -17,7 +17,9 @@ A high-precision, low-latency course registration tool for İstanbul Technical U
 * `winhttp.lib` (System library)
 
 ### Clone the Repository
-```git clone https://github.com/yourusername/itu-ders-bot.git ```
+```bash
+git clone https://github.com/yourusername/itu-ders-bot.git
+```
 
 ### Compilation
 This project requires MinGW-w64 (UCRT64 recommended) and the WinHTTP system library.
@@ -69,3 +71,4 @@ The program reads user credentials and target courses from `data/config.json`. E
 ### ⚠️ Disclaimer
 
 This tool is developed for educational purposes and personal use. The developers are not responsible for any misuse of this software or any consequences resulting from its use during the İTÜ registration process. Please use it responsibly and in compliance with university regulations.
+
