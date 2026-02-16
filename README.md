@@ -16,14 +16,15 @@ A high-precision, low-latency course registration tool for İstanbul Technical U
 * MinGW-w64 (UCRT64 recommended) or MSVC
 * `winhttp.lib` (System library)
 
+### Clone the Repository
+```git clone https://github.com/yourusername/itu-ders-bot.git ```
+
 ### Compilation
 This project requires MinGW-w64 (UCRT64 recommended) and the WinHTTP system library.
 Use the following command to create the executable:
 
 ```bash
-g++ -O3 src/main.cpp src/clock.cpp src/token.cpp -I include \
-    -o program.exe \
-    -lwinhttp
+g++ -O3 src/main.cpp src/clock.cpp src/token.cpp -I include -o program.exe -lwinhttp
 ```
 ## ⚙️ Configuration
 The program reads user credentials and target courses from `data/config.json`. Ensure this file exists in the same directory as the executable.
@@ -66,4 +67,5 @@ The program reads user credentials and target courses from `data/config.json`. E
 * [nlohmann/json](https://github.com/nlohmann/json): For modern, header-only JSON parsing in C++.
 
 ### ⚠️ Disclaimer
+
 This tool is developed for educational purposes and personal use. The developers are not responsible for any misuse of this software or any consequences resulting from its use during the İTÜ registration process. Please use it responsibly and in compliance with university regulations.
