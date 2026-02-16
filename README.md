@@ -58,9 +58,10 @@ The program reads user credentials and target courses from `data/config.json`. E
 ## 📅 To-Do List / Roadmap
 - [ ] Create a cmake file.
 - [ ] Create a "log file" system to save registration history.
+- [ ] Setup helper for initialization of config file.
 
 ## 🤝 Acknowledgments & Credits
-* Logic Attribution: Server result code mappings and config.json were adapted and ported to C++ from the original Python implementation by [[AtaTrkgl](https://github.com/AtaTrkgl/itu-ders-secici)].
+* Logic Attribution: Server result code mappings and config.json were adapted and ported to C++ from the original Python implementation by [AtaTrkgl](https://github.com/AtaTrkgl/itu-ders-secici).
 
 * [nlohmann/json](https://github.com/nlohmann/json): For modern, header-only JSON parsing in C++.
 
