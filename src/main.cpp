@@ -51,8 +51,7 @@ int main(int argc, char *argv[]) {
     SystemClock itu_clock;
     TokenFetcher itu_auth;
 
-    // Setup Persistent Session with Modern User-Agent
-    // Using a specific Chrome User-Agent as seen in your fetch
+    // Setup Persistent Session with Chrome User-Agent
     HINTERNET hSession = WinHttpOpen(L"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36", 
                                     WINHTTP_ACCESS_TYPE_DEFAULT_PROXY, 
                                     WINHTTP_NO_PROXY_NAME, 
@@ -108,7 +107,7 @@ int main(int argc, char *argv[]) {
         std::this_thread::sleep_until(token_tp);
     }
 
-    // Acquire Token Natively (Memory-Only)
+    // Acquire Token 
     std::string auth_header = itu_auth.get_bearer_token(
         config["account"]["username"], 
         config["account"]["password"],
@@ -226,4 +225,5 @@ int main(int argc, char *argv[]) {
     std::cout << "[System] Press Enter to exit." << std::endl;
     std::cin.get();
     return 0;
+
 }
