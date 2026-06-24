@@ -1,17 +1,16 @@
 {
-    "account": {
-        "username": "username",
-        "password": "password"
-    },
     "time": {
         "year": 2026,
-        "month": 1,
-        "day": 1,
-        "hour": 14,
-        "minute": 0
+        "month": 6,
+        "day": 24,
+        "hour": 12,
+        "minute": 0,
+        "second": 0,
+        "millisecond": 0,
+        "lead_millisecond": 80
     },
     "courses": {
-        "crn": [],
+        "crn": ["30335"],
         "scrn": []
     }
 }

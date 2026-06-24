@@ -132,20 +132,20 @@ std::string TokenFetcher::get_bearer_token(const std::string& username, const st
     }
     WinHttpCloseHandle(hReq2);
 
-    /** TODO: Reconsider this part */
+    /** TODO: Restructure this part */
     // Handle Identity Selection if page appears
-    // if (login_res.find("SelectIdentity") != std::string::npos) {
-    //     std::cout << "[Auth] Step 3: Selecting Student Identity..." << std::endl;
-    //     size_t id_pos = login_res.find("href=\"/Login.aspx?identityGuid=");
-    //     if (id_pos != std::string::npos) {
-    //         std::string id_path = decode_html(login_res.substr(id_pos + 6, login_res.find("\"", id_pos + 6) - (id_pos + 6)));
-    //         std::wstring wIdPath(id_path.begin(), id_path.end());
-    //         HINTERNET hReq3 = WinHttpOpenRequest(hAuthConn, L"GET", wIdPath.c_str(), NULL, NULL, NULL, WINHTTP_FLAG_SECURE);
-    //         WinHttpSendRequest(hReq3, WINHTTP_NO_ADDITIONAL_HEADERS, 0, NULL, 0, 0, 0);
-    //         WinHttpReceiveResponse(hReq3, NULL);
-    //         WinHttpCloseHandle(hReq3);
-    //     }
-    // }
+    if (login_res.find("SelectIdentity") != std::string::npos) {
+        std::cout << "[Auth] Step 3: Selecting Student Identity..." << std::endl;
+        size_t id_pos = login_res.find("href=\"/Login.aspx?identityGuid=");
+        if (id_pos != std::string::npos) {
+            std::string id_path = decode_html(login_res.substr(id_pos + 6, login_res.find("\"", id_pos + 6) - (id_pos + 6)));
+            std::wstring wIdPath(id_path.begin(), id_path.end());
+            HINTERNET hReq3 = WinHttpOpenRequest(hAuthConn, L"GET", wIdPath.c_str(), NULL, NULL, NULL, WINHTTP_FLAG_SECURE);
+            WinHttpSendRequest(hReq3, WINHTTP_NO_ADDITIONAL_HEADERS, 0, NULL, 0, 0, 0);
+            WinHttpReceiveResponse(hReq3, NULL);
+            WinHttpCloseHandle(hReq3);
+        }
+    }
     WinHttpCloseHandle(hAuthConn);
 
     // Land on Student Dashboard and Fetch JWT
