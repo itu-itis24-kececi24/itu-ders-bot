@@ -53,7 +53,7 @@ Ensure `data/config.json` exists in the same directory as the executable. `crn` 
   }
 }
 ```
-* Adjust `lead_millisecond` to send request specified milliseconds before the registration depending on your latency to ITU servers.  
+* Adjust `lead_millisecond` to send request specified milliseconds before the actual registration time depending on your latency to ITU servers.  
 
 ## 🖥️ Command Line Flags
 * `-logs`: Enables verbose logging of HTML responses and JWT acquisition.
