@@ -7,10 +7,10 @@
         "minute": 0,
         "second": 0,
         "millisecond": 0,
-        "lead_millisecond": 80
+        "lead_millisecond": 0
     },
     "courses": {
-        "crn": ["30335"],
+        "crn": ["11111"],
         "scrn": []
     }
 }
